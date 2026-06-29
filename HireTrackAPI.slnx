@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="HireTrack.CORE/HireTrack.CORE.csproj" />
-  <Project Path="HireTrack.Infrastructure/HireTrack.Infrastructure.csproj" />
+  <Project Path="HireTrack.CORE/HireTrack.CORE.csproj" Id="71237f71-d9bf-403f-9f37-891cf69e558c" />
+  <Project Path="HireTrack.Infrastructure/HireTrack.Infrastructure.csproj" Id="dcd0873b-0eb7-4a8e-b285-1056bf09bad4" />
   <Project Path="HireTrackAPI/HireTrackAPI.csproj" />
 </Solution>
