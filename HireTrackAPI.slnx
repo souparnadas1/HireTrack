@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="HireTrack.CORE/HireTrack.CORE.csproj" />
+  <Project Path="HireTrack.Infrastructure/HireTrack.Infrastructure.csproj" />
+  <Project Path="HireTrackAPI/HireTrackAPI.csproj" />
+</Solution>
