@@ -9,7 +9,6 @@ namespace HireTrack.CORE.Entities
     public class JobCategory : BaseEntity
     {
         public string Name { get; set; } = string.Empty;
-
         public ICollection<Job> Jobs { get; set; } = new List<Job>();
     }
 }
