@@ -1,5 +1,6 @@
 using HireTrack.CORE.Entities;
 using HireTrack.Infrastructure.HireTrackContext;
+using HireTrack.Infrastructure.Seed;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,6 +35,16 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+// Seed data
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<HireTrackDbContext>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    await DataSeeder.SeedAsync(context, roleManager, userManager);
 }
 
 app.UseHttpsRedirection();
