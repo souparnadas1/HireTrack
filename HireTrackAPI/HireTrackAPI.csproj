@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\HireTrack.CORE\HireTrack.CORE.csproj" />
     <ProjectReference Include="..\HireTrack.Infrastructure\HireTrack.Infrastructure.csproj" />
   </ItemGroup>
