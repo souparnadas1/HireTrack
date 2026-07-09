@@ -10,7 +10,7 @@ namespace HireTrack.Infrastructure.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IGenericRepository<JobCategory> JobCategories { get; }
-        IGenericRepository<Job> Jobs { get; }
+        IJobRepository Jobs { get; }
         IGenericRepository<Application> Applications { get; }
         Task<int> SaveChangesAsync();
     }

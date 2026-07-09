@@ -14,14 +14,14 @@ namespace HireTrack.Infrastructure.Repositories
         private readonly HireTrackDbContext _context;
 
         public IGenericRepository<JobCategory> JobCategories { get; private set; }
-        public IGenericRepository<Job> Jobs { get; private set; }
+        public IJobRepository Jobs { get; private set; }
         public IGenericRepository<Application> Applications { get; private set; }
 
         public UnitOfWork(HireTrackDbContext context)
         {
             _context = context;
             JobCategories = new GenericRepository<JobCategory>(context);
-            Jobs = new GenericRepository<Job>(context);
+            Jobs = new JobRepository(context);
             Applications = new GenericRepository<Application>(context);
         }
 
