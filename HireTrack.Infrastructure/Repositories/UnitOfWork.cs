@@ -15,14 +15,14 @@ namespace HireTrack.Infrastructure.Repositories
 
         public IGenericRepository<JobCategory> JobCategories { get; private set; }
         public IJobRepository Jobs { get; private set; }
-        public IGenericRepository<Application> Applications { get; private set; }
+        public IApplicationRepository Applications { get; private set; }
 
         public UnitOfWork(HireTrackDbContext context)
         {
             _context = context;
             JobCategories = new GenericRepository<JobCategory>(context);
             Jobs = new JobRepository(context);
-            Applications = new GenericRepository<Application>(context);
+            Applications = new ApplicationRepository(context);
         }
 
         public async Task<int> SaveChangesAsync()

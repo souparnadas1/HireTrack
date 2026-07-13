@@ -11,7 +11,7 @@ namespace HireTrack.Infrastructure.Interfaces
     {
         IGenericRepository<JobCategory> JobCategories { get; }
         IJobRepository Jobs { get; }
-        IGenericRepository<Application> Applications { get; }
+        IApplicationRepository Applications { get; }
         Task<int> SaveChangesAsync();
     }
 }
